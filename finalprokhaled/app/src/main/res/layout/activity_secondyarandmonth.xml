@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondYearActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:weightSum="6"
+        android:id="@+id/linear"
+        android:background="@color/color2"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/yearTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_below="@id/showDatesButton"
+            android:layout_marginTop="-146dp"
+            android:text="Selected Year: "
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/yearSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp" />
+
+
+        <TextView
+            android:id="@+id/monthTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yearTextView"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:text="Selected Month: "
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/monthSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_below="@id/yearSpinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/showDatesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monthSpinner"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_button"
+            android:padding="7dp"
+            android:textSize="20dp"
+            android:layout_marginTop="32dp"
+            android:text="Show Dates" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

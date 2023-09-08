@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="text_billing_date" type="id" />
+
+    <item name="text_charge_amount" type="id" />
+    <item name="text_customer_name" type="id" />
+    <item name="text_customer_id" type="id" />
+    <item name="text_address" type="id" />
+    <item name="text_bank_name" type="id" />
+    <item name="text_branch_code" type="id" />
+    <item name="text_account_number" type="id" />
+    <item name="button_save_file" type="id" />
+    <item name="editTextBankName" type="id" />
+    <item name="editTextBankCode" type="id" />
+    <item name="button_share_file" type="id" />
+</resources>

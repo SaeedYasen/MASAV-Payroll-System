@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:weightSum="6"
+        android:id="@+id/linear"
+        android:background="@color/color2"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Billing Details"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="16dp"
+        tools:ignore="ExtraText">
+
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/textViewCustomerDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextCustomerNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer number"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="10dp"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/editTextCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer name"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="5dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/editTextCustomerID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer ID"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:layout_marginTop="4dp"
+            android:inputType="text"/>
+
+
+        <TextView
+            android:id="@+id/textViewBankDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Here you can use a spinner (dropdown) or radio buttons to let the user choose the bank -->
+        <!-- For simplicity, I'll use an EditText for the bank selection -->
+        <!-- Replace the existing EditText for bank selection with a Spinner -->
+        <Spinner
+            android:id="@+id/spinnerBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bank"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="10dp"
+            android:entries="@array/bank_options" />
+
+
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Code"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            tools:ignore="ExtraText" />
+
+        <EditText
+            android:id="@+id/editTextBranchCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Branch code"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="5dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/editTextAccountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="5dp"
+            android:hint="Account number"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/editTextCardValidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Card validity"
+                android:background="@drawable/shape_edittext"
+                android:padding="7dp"
+                android:inputType="none"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4"
+                android:focusable="false"
+                android:onClick="showDatePickerDialogFrom" />
+
+            <!-- Add a button-like appearance to the EditText for date picker -->
+            <ImageButton
+                android:id="@+id/buttonDateCardValidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="showDatePickerDialogCardValidity" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewBillingDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Billing details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextBillingDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Billing description"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="5dp"
+            android:hint="Address"
+            android:inputType="text"/>
+
+        <!-- Use a LinearLayout to display two date pickers side by side -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextBillingPeriodFrom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_edittext"
+                android:padding="7dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4"
+                android:hint="Billing period from"
+                android:inputType="none"
+                android:focusable="false"
+                android:onClick="showDatePickerDialogFrom" />
+
+            <!-- Add a button-like appearance to the EditText for date picker -->
+            <ImageButton
+                android:id="@+id/buttonDatePickerFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="showDatePickerDialogFrom" />
+        </LinearLayout>
+
+        <!-- Use a LinearLayout to display two date pickers side by side -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/editTextBillingPeriodTo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4"
+                android:background="@drawable/shape_edittext"
+                android:padding="7dp"
+                android:hint="Billing period to"
+                android:inputType="none"
+                android:focusable="false"
+                android:onClick="showDatePickerDialogTo" />
+
+            <!-- Add a button-like appearance to the EditText for date picker -->
+            <ImageButton
+                android:id="@+id/buttonDatePickerTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="showDatePickerDialogTo" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/editTextFirstCharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="First charge"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4"
+                android:inputType="none"
+                android:focusable="false"
+                android:background="@drawable/shape_edittext"
+                android:padding="7dp"
+                android:onClick="showDatePickerFirstCharge" />
+
+            <!-- Add a button-like appearance to the EditText for date picker -->
+            <ImageButton
+                android:id="@+id/buttonDateFirstCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="showDatePickerFirstCharge" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextBillingDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Billing day"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="5dp"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/editTextChargeAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Charge amount"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/editTextNumberOfCharges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of charges"
+            android:background="@drawable/shape_edittext"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:layout_marginTop="5dp"
+            android:inputType="number"/>
+
+
+        <!-- Add a button for submitting the form -->
+        <Button
+            android:id="@+id/updet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Update"
+            android:textSize="18dp"
+            android:padding="7dp"
+            android:background="@drawable/shape_button" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

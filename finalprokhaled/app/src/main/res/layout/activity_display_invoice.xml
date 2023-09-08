@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DisplayInvoiceActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:weightSum="6"
+        android:id="@+id/linear"
+        android:background="@color/color2"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Invoice"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <!-- Bank details input fields -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextBankName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:background="@drawable/shape_edittext"
+            android:hint="Bank Name"
+            android:padding="7dp" />
+
+        <EditText
+            android:id="@+id/editTextBranchCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:background="@drawable/shape_edittext"
+            android:hint="Branch Code"
+            android:padding="7dp" />
+
+        <EditText
+            android:id="@+id/editTextBankCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4"
+            android:background="@drawable/shape_edittext"
+            android:hint="Bank Code"
+            android:textSize="18dp"
+            android:padding="7dp" />
+
+        <!-- Save File Button -->
+        <Button
+            android:id="@+id/button_save_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            android:background="@drawable/shape_button"
+            android:onClick="saveFile"
+            android:textSize="20dp"
+            android:padding="7dp"
+            android:text="Save File" />
+
+        <!-- Share File Button -->
+        <Button
+            android:id="@+id/button_share_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            android:background="@drawable/shape_button"
+            android:onClick="shareFile"
+            android:textSize="20dp"
+            android:padding="7dp"
+            android:text="Share File" />
+
+    </LinearLayout>
+
+</LinearLayout>

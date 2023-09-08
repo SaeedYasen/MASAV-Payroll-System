@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:weightSum="6"
+        android:id="@+id/linear"
+        android:background="@color/color2"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_margin="25dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/textViewRangeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_margin="10dp"
+        android:text="Select Date and name custmre"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextFromDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:textColor="@color/black"
+        android:textColorHint="@color/color4"
+        android:background="@drawable/shape_edittext"
+        android:padding="7dp"
+        android:layout_margin="10dp"
+        android:hint="From Date" />
+
+    <Spinner
+        android:id="@+id/customerSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edittext"
+        android:padding="7dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/color4"
+        android:layout_margin="10dp"
+        android:layout_below="@id/editTextFromDate"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/showDatesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customerSpinner"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_button"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:padding="7dp"
+        android:layout_marginTop="32dp"
+        android:text="Show Dates" />
+
+</LinearLayout>

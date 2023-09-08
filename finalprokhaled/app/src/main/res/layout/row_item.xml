@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="345dp"
+            android:padding="12dp">
+
+
+    <TextView
+        android:id="@+id/text_billing_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="תאריך חיוב: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_charge_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="סכום חיוב: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_billing_date"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/text_customer_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="שם הלקוח: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_charge_amount"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/text_customer_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="תעודת זהות: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_customer_name"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="כתובת: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_customer_id"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/text_bank_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="שם הבנק: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_address"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/text_branch_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="קוד הסניף: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_bank_name"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/text_account_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="מספר החשבון: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_branch_code"
+        android:textSize="16sp"/>
+
+    <!-- Descriptions -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="תאריך החיוב"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_billing_date"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="סכום החיוב במטבע"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_charge_amount"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="שם הלקוח המלא"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_customer_name"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="תעודת זהות של הלקוח"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_customer_id"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="כתובת הלקוח"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_address"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="שם הבנק"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_bank_name"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="קוד הסניף של הבנק"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_branch_code"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="מספר החשבון של הלקוח"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_account_number"
+        android:textSize="14sp"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_account_number" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

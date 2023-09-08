@@ -1,0 +1,86 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:weightSum="6"
+        android:id="@+id/linear"
+        android:background="@color/color2"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:gravity="left">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:id="@+id/btnShowByMonthYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button"
+        android:padding="7dp"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:text="הצג נתונים לפי חודש ושנה" />
+
+    <Button
+        android:id="@+id/btnFilterBetweenDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button"
+        android:padding="7dp"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:text="סינון בין שני תאריכים" />
+
+    <Button
+        android:id="@+id/btnSetDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button"
+        android:padding="7dp"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:text="קביעת תאריכים ולקוח" />
+
+    <!-- נוסיף אלמנטים נוספים כמו TextView, DatePicker, ListView וכדומה -->
+</LinearLayout>
+
