@@ -1,17 +1,21 @@
-# MSAV Banking Payment System
+# MASAV Payroll System
 
-## Project Description
-Developed a banking payment application designed to streamline fund transfers from employers to employees. The application generates MSAV files based on employee details, which are securely transmitted to registered banks for processing.
+## Overview
+A secure banking clearing system (MASAV) for payroll processing. The system generates a MASAV-formatted file based on employee data, ensuring compliance with banking standards.
+
+## Features
+- **Data Validation:** Ensures correct account numbers and required fields.
+- **MASAV File Generation:** Formats data to match bank requirements.
+- **Secure Transmission:** Sends files via FTP/SFTP with encryption.
 
 ## Technologies Used
-- **Java**
-- **XML**
-- **Android Studio**
+- Java  
+- FTP/SFTP  
+- AES Encryption (for secure data transfer)  
 
-## Key Contributions
-- Designed and implemented the core functionality for generating MSAV files.
-- Ensured seamless integration with banking systems for secure file transmission.
-- Focused on optimizing the application's performance and usability.
+## Usage
+1. Input employee data (CSV/HR system).  
+2. Validate and format data.  
+3. Generate a MASAV-compliant file.  
+4. Securely transmit to the bank via FTP/SFTP.  
 
-## Results
-Delivered a user-friendly and efficient solution for automating payroll transactions, improving accuracy and reducing manual effort.
