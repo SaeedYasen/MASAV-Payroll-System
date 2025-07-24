@@ -9,6 +9,11 @@ A secure banking clearing system (MASAV) for payroll processing. The system gene
 - **Secure Transmission:** Sends files via FTP/SFTP with encryption.
 
 ## Technologies Used
+
+## Demo
+https://github.com/user-attachments/assets/574dc2c2-b459-4147-b209-48cf2beea3a2
+
+
 - Java  
 - FTP/SFTP  
 - AES Encryption (for secure data transfer)  
